@@ -22,18 +22,26 @@
             align-items: center;
         }
 
-        div {
+        .pdf-container {
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 50px; /* PDF 파일 사이의 간격을 조절합니다. */
+        }
+
+        .pdf-frame {
+            width: 50%; /* 각 PDF 파일이 화면의 절반씩 보이도록 설정합니다. */
+            height: 100%;
+            border: none; /* 테두리 제거 */
         }
     </style>
 </head>
 <body>
-    <div>
-        <object data="resume.pdf" type="application/pdf"></object>
+    <div class="pdf-container">
+        <iframe class="pdf-frame" src="resume1.pdf"></iframe>
+        <iframe class="pdf-frame" src="resume2.pdf"></iframe>
     </div>
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
